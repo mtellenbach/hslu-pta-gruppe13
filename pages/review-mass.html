@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>PTA Gruppe 13</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../libs/bootstrap-4.5.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="../libs/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../libs/bootstrap-4.5.3-dist/js/bootstrap.min.js"></script>
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="../css/base.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column h-100">
+<header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mass-upload.html">EO-Anmeldung</a>
+                </li>
+            </ul>
+
+            <div>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Benutzerkonto</a>
+                    </li>
+                    <li>
+                        <form class="form-inline mt-2 mt-md-0">
+                            <input class="form-control mr-sm-2" type="text" placeholder="Suche"
+                                   aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Suche</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Begin page content -->
+<main role="main" class="flex-shrink-0">
+    <div class="container">
+        <h1 class="mt-5">Hier können Sie ihre erfassten Daten überprüfen:</h1>
+        <p>Per Klick auf die entsprechende Person können Sie alle Daten aufklappen.</p>
+        <button class="btn btn-default" data-toggle="collapse" aria-expanded="false" data-target="#person-1">
+            <p>Mustermann Max; CH93 xxxx xxxx xxxx xx</p>
+        </button>
+        <button class="btn btn-default" data-toggle="collapse" aria-expanded="false" data-target="#person-2">
+            <p>Mastermind Melchior; CH93 xxxx xxxx xxxx xx</p>
+        </button>
+        <div class="collapse" id="person-1">
+          <div class="card card-body">
+            <dl>
+                <dt>AHV</dt>
+                <dd>CH93 xxxx xxxx xxxx xx</dd>
+                <dt>Name</dt>
+                <dd>Mustermann</dd>
+                <dt>Vorname</dt>
+                <dd>May</dd>
+                <dt>PLZ / Ort</dt>
+                <dd>1000 Musterhausen</dd>
+                <dt>Adresse</dt>
+                <dd>Strasse 24</dd>
+                <dt>Dienstperiode</dt>
+                <dd>20.11.2020 - 25.11.2020</dd>
+                <dt>Code der Dienstleistung</dt>
+                <dd>AXXXX</dd>
+                <dt>Mutationen</dt>
+                <dd>Example</dd>
+                <dt>Anzahl Diensttage</dt>
+                <dd>5</dd>
+            </dl>
+                <a href="correct.html" class="btn btn-primary mt-2">Daten korrigieren</a>
+                <a href="#" class="btn btn-danger mt-2">Dieser Eintrag löschen</a>
+          </div>
+        </div>
+        <div class="collapse" id="person-2">
+          <div class="card card-body">
+            <dl>
+                <dt>AHV</dt>
+                <dd>CH93 xxxx xxxx xxxx xx</dd>
+                <dt>Name</dt>
+                <dd>Mastermind</dd>
+                <dt>Vorname</dt>
+                <dd>Melchior</dd>
+                <dt>PLZ / Ort</dt>
+                <dd>1000 Musterhausen</dd>
+                <dt>Adresse</dt>
+                <dd>Strasse 24</dd>
+                <dt>Dienstperiode</dt>
+                <dd>20.11.2020 - 25.11.2020</dd>
+                <dt>Code der Dienstleistung</dt>
+                <dd>AXXXX</dd>
+                <dt>Mutationen</dt>
+                <dd>Example</dd>
+                <dt>Anzahl Diensttage</dt>
+                <dd>5</dd>
+            </dl> 
+                <a href="correct.html" class="btn btn-primary mt-2">Daten korrigieren</a>
+                <a href="#" class="btn btn-danger mt-2">Dieser Eintrag löschen</a>
+          </div>
+        </div>
+
+        <form class="mt-5" action="confirmation.html">
+            <div class="mb-3 input-group">
+                <div class="custom-file">
+                    <input type="file" accept=".pdf" class="custom-file-input" id="inputGroupFile01"
+                           aria-describedby="inputGroupFileAddon01">
+                    <label class="custom-file-label" for="inputGroupFile01">Geben Sie Ihre digitale Signatur an</label>
+                </div>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Signieren und senden</button>
+        </form>
+    </div>
+</main>
+
+<footer class="footer mt-auto py-3">
+    <div class="container">
+        <span class="text-muted">PTA - Gruppe 13: Schmid Mathias, Schürmann Mauro, Tellenbach Michael, Troxler
+            Dario, Wiss Micha</span>
+    </div>
+</footer>
+<script type="text/javascript">
+    $('.collapse').collapse()
+</script>
+</html>

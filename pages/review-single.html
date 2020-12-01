@@ -31,14 +31,13 @@
 <header>
     <!-- Fixed navbar -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="willkommen.html">Home</a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="mass-upload.html">EO-Anmeldung</a>
@@ -66,28 +65,32 @@
 <!-- Begin page content -->
 <main role="main" class="flex-shrink-0">
     <div class="container">
-        <h1 class="mt-5">Ihre Daten</h1>
-        <form>
-            <h2>Personalien</h2>
-            <fieldset class="row">
-                <div class="form-group col-sm-6">
-                    <label for="name">Name</label>
-                    <input class="form-control" type="text" name="name" id="name" required>
-                </div>
-                <div class="form-group col-sm-6">
-                    <label for="firstname">Vorname</label>
-                    <input class="form-control" type="text" name="firstname" id="firstname" required>
-                </div>
-                <div class="form-group col-sm-12">
-                    <label for="zip-city">PLZ, Ort</label>
-                    <input class="form-control" type="text" name="zip-city" id="zip-city" required>
-                </div>
-                <div class="form-group col-sm-6">
-                    <label for="address">Addresse</label>
-                    <input class="form-control" type="text" name="address" id="address" required>
-                </div>
-            </fieldset>
-        </form>
+        <h1 class="mt-5">Willkommen bei der einfachen Erfassung von EO-Anmeldeformulare</h1>
+        <p>Hier können Sie Ihre erfassten Daten überprüfen</p>
+        <div class="card card-body">
+            <dl>
+                <dt>AHV</dt>
+                <dd>CH93 xxxx xxxx xxxx xx</dd>
+                <dt>Name</dt>
+                <dd>Mastermind</dd>
+                <dt>Vorname</dt>
+                <dd>Melchior</dd>
+                <dt>PLZ / Ort</dt>
+                <dd>1000 Musterhausen</dd>
+                <dt>Adresse</dt>
+                <dd>Strasse 24</dd>
+                <dt>Dienstperiode</dt>
+                <dd>20.11.2020 - 25.11.2020</dd>
+                <dt>Code der Dienstleistung</dt>
+                <dd>AXXXX</dd>
+                <dt>Mutationen</dt>
+                <dd>Example</dd>
+                <dt>Anzahl Diensttage</dt>
+                <dd>5</dd>
+            </dl>
+            <a href="/correct.html" class="btn btn-primary mt-2">Daten korrigieren</a>
+            <a href="#" class="btn btn-danger mt-2">Dieser Eintrag löschen</a>
+        </div>
     </div>
 </main>
 

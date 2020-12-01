@@ -1,6 +1,19 @@
-/* Custom page CSS
--------------------------------------------------- */
-/* Not required for template or sticky footer method. */
+body {
+	min-height: 100vh;
+}
+
+body > .container {
+	min-height: 100vh;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
+
+	margin: 0 auto;
+	padding: 2rem 0;
+}
 
 main > .container {
     padding: 60px 15px 0;
@@ -26,4 +39,8 @@ code {
 
 .form-signin .form-control {
     margin: 2rem 0;
+}
+
+.navbar-singleform {
+	justify-content: flex-end;
 }

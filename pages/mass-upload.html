@@ -40,11 +40,10 @@
                 <li class="nav-item">
                     <a class="nav-link" href="willkommen.html">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="mass-upload.html">EO-Anmeldung</a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">EO-Anmeldung</a>
                 </li>
             </ul>
-
             <div>
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
@@ -66,32 +65,35 @@
 <!-- Begin page content -->
 <main role="main" class="flex-shrink-0">
     <div class="container">
-        <h1 class="mt-5">Ihre Daten</h1>
-        <form>
-            <h2>Personalien</h2>
-            <fieldset class="row">
-                <div class="form-group col-sm-6">
-                    <label for="name">Name</label>
-                    <input class="form-control" type="text" name="name" id="name" required>
+        <h1>Massenerfassung</h1>
+        <p>Beachen Sie hierbei, dass Sie das korrekte Format (.csv) und alle inhaltlichen Vorgaben gemäss
+            <a href="../docs/example.csv" download>dieser Vorlage</a> erfüllen. Die erste Zeile stellt dabei die
+            Kopfzeile
+            dar und wird benötigt, die Inhalte zu identifizieren. Deshalb darf diese nicht verändert werden!<br>
+            Die einzelnen Zeilen stehen für einzelne Personen. Die Daten der Personen müssen in der Reihenfolge der Kopfzeile erfolgen. 
+            <br><br>Für eine bessere Bearbeitbarkeit empfiehlt es sich, die Datei in Excel zu bearbeiten.
+        </p>
+        <pre>
+"ahv";"name";"vorname";"plz";"ort";"adresse";"dienstperiode_von";"dienstperiode_bis";"code_der_dienstleistung";"mutationen";"anzahl_diensttage";"email"
+"CH93 XXXX XXXX XX";"Muster";"Max";"1000";"Musterhausen";"Strasse 24";"20.11.2020";"25.11.2020";"AXXXX";"Example";"5";"max@muster.ch"
+        </pre>
+
+        <form class="mt-5" action="review-mass.html">
+            <div class="mb-3 input-group">
+                <div class="custom-file">
+                    <input type="file" accept=".csv" class="custom-file-input" id="inputGroupFile01"
+                           aria-describedby="inputGroupFileAddon01">
+                    <label class="custom-file-label" for="inputGroupFile01">Legen Sie Ihr CSV hier ab</label>
                 </div>
-                <div class="form-group col-sm-6">
-                    <label for="firstname">Vorname</label>
-                    <input class="form-control" type="text" name="firstname" id="firstname" required>
-                </div>
-                <div class="form-group col-sm-12">
-                    <label for="zip-city">PLZ, Ort</label>
-                    <input class="form-control" type="text" name="zip-city" id="zip-city" required>
-                </div>
-                <div class="form-group col-sm-6">
-                    <label for="address">Addresse</label>
-                    <input class="form-control" type="text" name="address" id="address" required>
-                </div>
-            </fieldset>
+            </div>
+
+            <button class="btn btn-primary"  type="submit">Überprüfen</button>
+            <button class="btn btn-secondary"  type="reset">Formular zurücksetzen</button>
         </form>
     </div>
 </main>
 
-<footer class="footer mt-auto py-3">
+<footer class="footer mt-auto py-3 mt-2">
     <div class="container">
         <span class="text-muted">PTA - Gruppe 13: Schmid Mathias, Schürmann Mauro, Tellenbach Michael, Troxler
             Dario, Wiss Micha</span>

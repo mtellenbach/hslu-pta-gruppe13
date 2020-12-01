@@ -31,7 +31,8 @@
 <header>
     <!-- Fixed navbar -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -40,16 +41,24 @@
                     <a class="nav-link" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="anmeldung.html">EO-Anmeldung</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="daten.html">Meine Daten</a>
+                    <a class="nav-link" href="mass-upload.html">EO-Anmeldung</a>
                 </li>
             </ul>
-            <form class="form-inline mt-2 mt-md-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Suche" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Suche</button>
-            </form>
+
+            <div>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Benutzerkonto</a>
+                    </li>
+                    <li>
+                        <form class="form-inline mt-2 mt-md-0">
+                            <input class="form-control mr-sm-2" type="text" placeholder="Suche"
+                                   aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Suche</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 </header>
@@ -59,6 +68,22 @@
     <div class="container">
         <h1 class="mt-5">Willkommen bei der einfachen Erfassung von EO-Anmeldeformulare</h1>
         <p>Wir sind PTA Gruppe 13 und wünschen viel Spass bei der Arbeit!</p>
+        <div class="d-flex flex-row justify-content-between">
+            <div class="card" style="width: 45%;">
+                <div class="card-body">
+                    <h5 class="card-title">Einzelerfassung</h5>
+                    <p class="card-text">Wollen Sie ein einzelnes Formular ausfüllen?</p>
+                    <a href="single-form.html" class="btn btn-primary">Zur Einzelerfassung</a>
+                </div>
+            </div>
+            <div class="card" style="width: 45%;">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Möchten Sie mehrere Formulare generieren?</p>
+                    <a href="mass-upload.html" class="btn btn-primary">Zur Massenerfassug</a>
+                </div>
+            </div>
+        </div>
     </div>
 </main>
 
