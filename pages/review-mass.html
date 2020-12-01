@@ -33,7 +33,8 @@
 <header>
     <!-- Fixed navbar -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -68,64 +69,56 @@
 <main role="main" class="flex-shrink-0">
     <div class="container">
         <h1 class="mt-5">Hier können Sie ihre erfassten Daten überprüfen:</h1>
-        <p>Per Klick auf die entsprechende Person können Sie alle Daten aufklappen.</p>
-        <button class="btn btn-default" data-toggle="collapse" aria-expanded="false" data-target="#person-1">
-            <p>Mustermann Max; CH93 xxxx xxxx xxxx xx</p>
+        <p>Per Klick auf die Person können Sie die Daten zuklappen.</p>
+        <button class="btn btn-outline-primary mb-2" data-toggle="collapse" aria-expanded="false"
+                data-target="#person-1">
+            Mustermann Max; CH93 XXXX XXXX XXXX XX
         </button>
-        <button class="btn btn-default" data-toggle="collapse" aria-expanded="false" data-target="#person-2">
-            <p>Mastermind Melchior; CH93 xxxx xxxx xxxx xx</p>
+        <button class="btn btn-outline-primary mb-2" data-toggle="collapse" aria-expanded="false"
+                data-target="#person-2">
+            Mastermind Melchior; CH93 XXXX XXXX XXXX XX
         </button>
         <div class="collapse" id="person-1">
-          <div class="card card-body">
-            <dl>
-                <dt>AHV</dt>
-                <dd>CH93 xxxx xxxx xxxx xx</dd>
-                <dt>Name</dt>
-                <dd>Mustermann</dd>
-                <dt>Vorname</dt>
-                <dd>May</dd>
-                <dt>PLZ / Ort</dt>
-                <dd>1000 Musterhausen</dd>
-                <dt>Adresse</dt>
-                <dd>Strasse 24</dd>
-                <dt>Dienstperiode</dt>
-                <dd>20.11.2020 - 25.11.2020</dd>
-                <dt>Code der Dienstleistung</dt>
-                <dd>AXXXX</dd>
-                <dt>Mutationen</dt>
-                <dd>Example</dd>
-                <dt>Anzahl Diensttage</dt>
-                <dd>5</dd>
-            </dl>
+            <div class="card card-body">
+                <h3>Mustermann Max; CH93 XXXX XXXX XXXX XX</h3>
+                <dl>
+                    <dt>PLZ / Ort</dt>
+                    <dd>1000 Musterhausen</dd>
+                    <dt>Adresse</dt>
+                    <dd>Strasse 24</dd>
+                    <dt>Dienstperiode</dt>
+                    <dd>20.11.2020 - 25.11.2020</dd>
+                    <dt>Code der Dienstleistung</dt>
+                    <dd>AXXXX</dd>
+                    <dt>Mutationen</dt>
+                    <dd>Example</dd>
+                    <dt>Anzahl Diensttage</dt>
+                    <dd>5</dd>
+                </dl>
                 <a href="correct.html" class="btn btn-primary mt-2">Daten korrigieren</a>
                 <a href="#" class="btn btn-danger mt-2">Dieser Eintrag löschen</a>
-          </div>
+            </div>
         </div>
         <div class="collapse" id="person-2">
-          <div class="card card-body">
-            <dl>
-                <dt>AHV</dt>
-                <dd>CH93 xxxx xxxx xxxx xx</dd>
-                <dt>Name</dt>
-                <dd>Mastermind</dd>
-                <dt>Vorname</dt>
-                <dd>Melchior</dd>
-                <dt>PLZ / Ort</dt>
-                <dd>1000 Musterhausen</dd>
-                <dt>Adresse</dt>
-                <dd>Strasse 24</dd>
-                <dt>Dienstperiode</dt>
-                <dd>20.11.2020 - 25.11.2020</dd>
-                <dt>Code der Dienstleistung</dt>
-                <dd>AXXXX</dd>
-                <dt>Mutationen</dt>
-                <dd>Example</dd>
-                <dt>Anzahl Diensttage</dt>
-                <dd>5</dd>
-            </dl> 
+            <div class="card card-body">
+                <h3>Mastermind Melchior; CH93 XXXX XXXX XXXX XX</h3>
+                <dl>
+                    <dt>PLZ / Ort</dt>
+                    <dd>1000 Musterhausen</dd>
+                    <dt>Adresse</dt>
+                    <dd>Strasse 24</dd>
+                    <dt>Dienstperiode</dt>
+                    <dd>20.11.2020 - 25.11.2020</dd>
+                    <dt>Code der Dienstleistung</dt>
+                    <dd>AXXXX</dd>
+                    <dt>Mutationen</dt>
+                    <dd>Example</dd>
+                    <dt>Anzahl Diensttage</dt>
+                    <dd>5</dd>
+                </dl>
                 <a href="correct.html" class="btn btn-primary mt-2">Daten korrigieren</a>
                 <a href="#" class="btn btn-danger mt-2">Dieser Eintrag löschen</a>
-          </div>
+            </div>
         </div>
 
         <form class="mt-5" action="confirmation.html">
@@ -136,8 +129,10 @@
                     <label class="custom-file-label" for="inputGroupFile01">Geben Sie Ihre digitale Signatur an</label>
                 </div>
             </div>
-
-            <button class="btn btn-primary" type="submit">Signieren und senden</button>
+            <div class="d-flex flex-row justify-content-between">
+                <button class="btn btn-primary" type="submit">Signieren und senden</button>
+                <a class="btn btn-outline-primary" href="../docs/pdfA.png" target="_blank">PDF's generieren</a>
+            </div>
         </form>
     </div>
 </main>
