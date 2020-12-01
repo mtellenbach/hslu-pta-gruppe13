@@ -93,7 +93,7 @@
                 <div class="form-group col-sm-6">
                     <label for="zivilstand">Zivilstand</label>
                     <select class="form-control" name="zivilstand" id="zivilstand" required>
-                        <option value="0">Zivilstand angeben</option>
+                        <option value="">Zivilstand angeben</option>
                         <option value="ledig">ledig</option>
                         <option value="verheiratet">verheiratet</option>
                         <option value="verwittwet">verwitwet</option>
@@ -159,7 +159,7 @@
                 <div class="form-group col-sm-6">
                     <label for="taetigkeit">Waren sie vor dem Militärdienst:</label>
                     <select class="form-control" name="taetigkeit" id="taetigkeit" required>
-                        <option value="0">Tätigkeit angeben</option>
+                        <option value="">Tätigkeit angeben</option>
                         <option value="an">Arbeitnehmer(in)?</option>
                         <option value="uni">Schüler(in)/Student(in)?</option>
                         <option value="ne">nicht erwerbstätig?</option>
@@ -196,7 +196,7 @@
                 <div class="form-group col-sm-6">
                     <label for="kontotyp">Kontotyp</label>
                     <select class="form-control" name="kontotyp" id="kontotyp" required>
-                        <option value="0">Kontotyp angeben</option>
+                        <option value="">Kontotyp angeben</option>
                         <option value="bank">Bankkonto</option>
                         <option value="gelb">Gelbes Konto</option>
                     </select>
@@ -257,8 +257,12 @@
     zs.addEventListener('change', () => {
         if (zs.value === "verheiratet") {
             partner.classList.remove('d-none')
+            document.querySelector('#partner').setAttribute('required', true)
+            document.querySelector('#partner-birth').setAttribute('required', true)
         } else {
             partner.classList.add('d-none')
+            document.querySelector('#partner').removeAttribute('required')
+            document.querySelector('#partner-birth').removeAttribute('required')
         }
     })
 
@@ -277,21 +281,26 @@
     var bank = document.querySelector('.bank')
     var gelb = document.querySelector('.gelb')
 
-    if (kontotyp.value === "bank") {
-        bank.classList.remove('d-none')
-    } else {
-        bank.classList.add('d-none')
-    }
     kontotyp.addEventListener('change', () => {
         if (kontotyp.value === "bank") {
             bank.classList.remove('d-none')
+            document.querySelector('#bankkonto-inhaber').setAttribute('required', true)
+            document.querySelector('#bank').setAttribute('required', true)
+            document.querySelector('#number').setAttribute('required', true)
         } else {
             bank.classList.add('d-none')
+            document.querySelector('#bankkonto-inhaber').removeAttribute('required')
+            document.querySelector('#bank').removeAttribute('required')
+            document.querySelector('#number').removeAttribute('required')
         }
         if (kontotyp.value === "gelb") {
             gelb.classList.remove('d-none')
+            document.querySelector('#gelb-inhaber').setAttribute('required', true)
+            document.querySelector('#gelb-pc-number').setAttribute('required', true)
         } else {
             gelb.classList.add('d-none')
+            document.querySelector('#gelb-inhaber').removeAttribute('required')
+            document.querySelector('#gelb-pc-number').removeAttribute('required')
         }
     })
 
@@ -300,25 +309,37 @@
     taetigkeit.addEventListener('change', () => {
         if (taetigkeit.value === "al") {
             document.querySelector('.al').classList.remove('d-none')
+            document.querySelector('.al input').setAttribute('required', true)
         } else {
             document.querySelector('.al').classList.add('d-none')
+            document.querySelector('.al input').remove('required')
         }
         if (taetigkeit.value === "uni"){
             document.querySelector('.uni').classList.remove('d-none')
+            document.querySelector('.uni input').setAttribute('required', true)
         } else {
             document.querySelector('.uni').classList.add('d-none')
+            document.querySelector('.uni input').removeAttribute('required')
         }
         if (taetigkeit.value === "lhr"){
             document.querySelector('.fin').classList.remove('d-none')
+            document.querySelector('.fin input').setAttribute('required', true)
         } else {
             document.querySelector('.fin').classList.add('d-none')
+            document.querySelector('.fin input').removeAttribute('required')
         }
         if (taetigkeit.value === "se"){
             document.querySelector('.se').classList.remove('d-none')
             document.querySelector('.se-nr').classList.remove('d-none')
+
+            document.querySelector('.se input').setAttribute('required', true)
+            document.querySelector('.se-nr input').setAttribute('required', true)
         } else {
             document.querySelector('.se').classList.add('d-none')
             document.querySelector('.se-nr').classList.add('d-none')
+
+            document.querySelector('.se input').removeAttribute('required')
+            document.querySelector('.se-nr input').removeAttribute('required')
         }
     })
 </script>
