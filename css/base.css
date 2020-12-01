@@ -44,3 +44,7 @@ code {
 .navbar-singleform {
 	justify-content: flex-end;
 }
+
+h1 {
+	margin-top: 40px;
+}
