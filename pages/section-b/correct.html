@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>PTA Gruppe 13</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../libs/bootstrap-4.5.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="../css/base.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column h-100">
+<header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="willkommen.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mass-upload.html">EO-Anmeldung</a>
+                </li>
+            </ul>
+
+            <div>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../index.html">Logout</a>
+                    </li>
+                    <li>
+                        <form class="form-inline mt-2 mt-md-0">
+                            <input class="form-control mr-sm-2" type="text" placeholder="Suche"
+                                   aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Suche</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Begin page content -->
+<main role="main" class="flex-shrink-0">
+    <div class="container">
+        <h1 class="mt-5">Korrektur des Formulars</h1>
+        <form action="review-single.html">
+            <fieldset class="row">
+                <div class="form-group col-sm-6">
+                    <label for="number">AHV-Nummer</label>
+                    <input class="form-control" type="text" name="number" id="number" required
+                           value="CH93 XXXX XXXX XXXX XXXX">
+                </div>
+            </fieldset>
+            <h2>Personalien</h2>
+            <fieldset class="row">
+                <div class="form-group col-sm-6">
+                    <label for="name">Name</label>
+                    <input class="form-control" type="text" name="name" id="name" required value="Mastermind">
+                </div>
+                <div class="form-group col-sm-6">
+                    <label for="firstname">Vorname</label>
+                    <input class="form-control" type="text" name="firstname" id="firstname" required value="Melchior">
+                </div>
+                <div class="form-group col-sm-6">
+                    <label for="zip-city">PLZ, Ort</label>
+                    <input class="form-control" type="text" name="zip-city" id="zip-city" required
+                           value="1000 Musterhausen">
+                </div>
+                <div class="form-group col-sm-6">
+                    <label for="address">Addresse</label>
+                    <input class="form-control" type="text" name="address" id="address" required value="Strasse 24">
+                </div>
+                <div class="form-group col-sm-6">
+                    <label for="email">E-Mail Adresse</label>
+                    <input class="form-control" type="email" name="email" id="email" required
+                           value="melchior@mastermind.ch">
+                </div>
+            </fieldset>
+
+            <h2>Angaben zur Dienstleistung</h2>
+            <fieldset class="row">
+                <div class="form-group col-sm-6">
+                    <label for="period">Dienstperiode (von - bis)</label>
+                    <input class="form-control" type="text" name="period" id="period" required value="20.11.2020 - 25.11.2020">
+                </div>
+                <div class="form-group  col-sm-6">
+                    <label for="mutations">Mutationen</label>
+                    <input class="form-control" type="text" name="mutations" id="mutations" value="AXXXXX">
+                </div>
+                <div class="form-group col-sm-6">
+                    <label for="days">Anzahl besoldeter Diensttage</label>
+                    <input class="form-control" type="number" name="days" id="days" required value="5">
+                </div>
+            </fieldset>
+            <button class="btn btn-primary"  type="submit">Überprüfen</button>
+            <button class="btn btn-secondary"  type="reset">Formular zurücksetzen</button>
+        </form>
+    </div>
+</main>
+
+<footer class="footer mt-auto py-3">
+    <div class="container">
+        <span class="text-muted">PTA - Gruppe 13: Schmid Mathias, Schürmann Mauro, Tellenbach Michael, Troxler
+            Dario, Wiss Micha</span>
+    </div>
+</footer>
+<script type="text/javascript">
+    $('input[name="period"]').daterangepicker();
+</script>
+</html>

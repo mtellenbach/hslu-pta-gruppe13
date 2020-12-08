@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>PTA Gruppe 13</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../libs/bootstrap-4.5.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="../../css/base.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column h-100">
+<header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="willkommen.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mass-upload.html">EO-Anmeldung</a>
+                </li>
+            </ul>
+
+            <div>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../index.html">Logout</a>
+                    </li>
+                    <li>
+                        <form class="form-inline mt-2 mt-md-0">
+                            <input class="form-control mr-sm-2" type="text" placeholder="Suche"
+                                   aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Suche</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Begin page content -->
+<main role="main" class="flex-shrink-0">
+    <div class="container">
+        <h1 class="mt-5">Ihr EO-Anmeldeformular</h1>
+        <div class="card card-body">
+            <h3>Mustermann Max; CH93 XXXX XXXX XXXX XX</h3>
+            <dl>
+                <dt>PLZ / Ort</dt>
+                <dd>1000 Musterhausen</dd>
+                <dt>Adresse</dt>
+                <dd>Strasse 24</dd>
+                <dt>Dienstperiode</dt>
+                <dd>20.11.2020 - 25.11.2020</dd>
+                <dt>Code der Dienstleistung</dt>
+                <dd>AXXXX</dd>
+                <dt>Mutationen</dt>
+                <dd>Example</dd>
+                <dt>Anzahl Diensttage</dt>
+                <dd>5</dd>
+            </dl>
+        </div>
+        <form action="review-single.html" class="mt-4">
+            <h4>Angaben über den Familienstand</h4>
+            <fieldset class="row">
+                <div class="form-group col-sm-6">
+                    <label for="zivilstand">Zivilstand</label>
+                    <select class="form-control" name="zivilstand" id="zivilstand" required>
+                        <option value="">Zivilstand angeben</option>
+                        <option value="ledig">ledig</option>
+                        <option value="verheiratet">verheiratet</option>
+                        <option value="verwittwet">verwitwet</option>
+                        <option value="geschieden">geschieden</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <div class="partner d-none">
+                <h4>Ehepartner/in</h4>
+                <fieldset class="row">
+                    <div class="form-group col-sm-6">
+                        <label for="partner">Name und Vorname</label>
+                        <input class="form-control" type="text" name="partner" id="partner">
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label for="partner-birth">Geburtsdatum</label>
+                        <input class="form-control" type="text" name="partner-birth" id="partner-birth">
+                    </div>
+                </fieldset>
+            </div>
+
+            <fieldset class="row">
+                <div class="form-group col-sm-6">
+                    <label for="children">Haben Sie Kinder?</label>
+                    <select class="form-control" name="children" id="children" required>
+                        <option value="0">nein</option>
+                        <option value="1">ja</option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset class="child-container d-none row">
+                <div class="form-group col-sm-6">
+                    <label for="child1">Name und Vorname Kind</label>
+                    <input class="form-control" type="text" name="child1" id="child1">
+                </div>
+                <div class="form-group col-sm-6">
+                    <label for="child1-birth">Geburtsdatum Kind</label>
+                    <input class="form-control" type="text" name="child1-birth" id="child1-birth">
+                </div>
+
+                <div class="form-group col-sm-6">
+                    <label for="child2">Name und Vorname Kind</label>
+                    <input class="form-control" type="text" name="child2" id="child2">
+                </div>
+                <div class="form-group col-sm-6">
+                    <label for="child2-birth">Geburtsdatum Kind</label>
+                    <input class="form-control" type="text" name="child2-birth" id="child2-birth">
+                </div>
+
+                <div class="form-group col-sm-6">
+                    <label for="child3">Name und Vorname Kind</label>
+                    <input class="form-control" type="text" name="child3" id="child3">
+                </div>
+                <div class="form-group col-sm-6">
+                    <label for="child3-birth">Geburtsdatum Kind</label>
+                    <input class="form-control" type="text" name="child3-birth" id="child3-birth">
+                </div>
+            </fieldset>
+
+            <h4>Angaben über die vordienstliche Tätigkeit</h4>
+            <fieldset class="row">
+                <div class="form-group col-sm-6">
+                    <label for="taetigkeit">Waren sie vor dem Militärdienst:</label>
+                    <select class="form-control" name="taetigkeit" id="taetigkeit" required>
+                        <option value="">Tätigkeit angeben</option>
+                        <option value="an">Arbeitnehmer(in)?</option>
+                        <option value="uni">Schüler(in)/Student(in)?</option>
+                        <option value="ne">nicht erwerbstätig?</option>
+                        <option value="lhr">Lehrnende(r)?</option>
+                        <option value="se">selbstständig erwerbend?</option>
+                        <option value="al">arbeitslos und beziehen ein Taggeld der Arbeitslosenversicherung?</option>
+                        <option value="ma">bei mehreren Arbeitgebern beschäftigt?</option>
+                        <option value="gan">gleichzeitig Arbeitnehmer(in) und selbstständig erwerbend?</option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset class="row">
+                <div class="an d-none form-group col-sm-6">
+                    <label for="an-mail">E-Mail des Arbeitgebers (optional zur Weiterleitung des Formulars)</label>
+                    <input class="form-control" type="text" name="an-mail" id="an-mail">
+                </div>
+                <div class="al d-none form-group col-sm-6">
+                    <label for="al-since">seit</label>
+                    <input class="form-control" type="text" name="al-since" id="al-since">
+                </div>
+                <div class="uni d-none form-group col-sm-6">
+                    <label for="uni">Name und Adresse der Schule bzw. der Universität</label>
+                    <input class="form-control" type="text" name="uni" id="uni">
+                </div>
+                <div class="fin d-none form-group col-sm-6">
+                    <label for="fin">Datum des Ausbildungsabschlusses</label>
+                    <input class="form-control" type="datetime-local" name="fin" id="fin">
+                </div>
+                <div class="se d-none form-group col-sm-6">
+                    <label for="se-name">Name der Ausgleichskasse</label>
+                    <input class="form-control" type="text" name="se-name" id="se-name">
+                </div>
+                <div class="se-nr d-none form-group col-sm-6">
+                    <label for="se-anr">Abrechnungsnummer</label>
+                    <input class="form-control" type="text" name="se-anr" id="se-anr">
+                </div>
+            </fieldset>
+            <h4>Auszahlung der Entschädigung</h4>
+            <fieldset class="row">
+                <div class="form-group col-sm-6">
+                    <label for="kontotyp">Kontotyp</label>
+                    <select class="form-control" name="kontotyp" id="kontotyp" required>
+                        <option value="">Kontotyp angeben</option>
+                        <option value="bank">Bankkonto</option>
+                        <option value="gelb">Gelbes Konto</option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset class="bank d-none row">
+                <div class="form-group col-sm-6">
+                    <label for="bankkonto-inhaber">Kontoinhaber/in</label>
+                    <input class="form-control" type="text" name="bankkonto-inhaber" id="bankkonto-inhaber">
+                </div>
+                <div class="form-group col-sm-6">
+                    <label for="bank">Name der Bank</label>
+                    <input class="form-control" type="text" name="bank" id="bank">
+                </div>
+                <div class=" form-group col-sm-6">
+                    <label for="konto-zip-city">PLZ, Ort</label>
+                    <input class="form-control" type="text" name="konto-zip-city" id="konto-zip-city">
+                </div>
+                <div class=" form-group col-sm-6">
+                    <label for="number">Bankkonto-Nummer</label>
+                    <input class="form-control" type="text" name="number" id="number">
+                </div>
+                <div class=" form-group col-sm-6">
+                    <label for="bank-pc-number">PC-Kto. der Bank</label>
+                    <input class="form-control" type="text" name="bank-pc-number" id="bank-pc-number">
+                </div>
+                <div class=" form-group col-sm-6">
+                    <label for="clearing">Banken-Clearing-Nummer</label>
+                    <input class="form-control" type="text" name="clearing" id="clearing">
+                </div>
+            </fieldset>
+            <fieldset class="gelb d-none row">
+                <div class=" form-group col-sm-6">
+                    <label for="gelb-inhaber">Kontoinhaber/in</label>
+                    <input class="form-control" type="text" name="gelb-inhaber" id="gelb-inhaber">
+                </div>
+                <div class=" form-group col-sm-6">
+                    <label for="gelb-pc-number">PC-Kto.</label>
+                    <input class="form-control" type="text" name="gelb-pc-number" id="gelb-pc-number">
+                </div>
+            </fieldset>
+            <button class="btn btn-primary" type="submit">Überprüfen</button>
+            <button class="btn btn-secondary" type="reset">Formular zurücksetzen</button>
+        </form>
+    </div>
+</main>
+
+<footer class="footer mt-auto py-3">
+    <div class="container">
+        <span class="text-muted">PTA - Gruppe 13: Schmid Mathias, Schürmann Mauro, Tellenbach Michael, Troxler
+            Dario, Wiss Micha</span>
+    </div>
+</footer>
+<script type="text/javascript">
+    var zs = document.querySelector('#zivilstand')
+    var partner = document.querySelector('.partner')
+
+    zs.addEventListener('change', () => {
+        if (zs.value === "verheiratet") {
+            partner.classList.remove('d-none')
+            document.querySelector('#partner').setAttribute('required', "true")
+            document.querySelector('#partner-birth').setAttribute('required', "true")
+        } else {
+            partner.classList.add('d-none')
+            document.querySelector('#partner').removeAttribute('required')
+            document.querySelector('#partner-birth').removeAttribute('required')
+        }
+    })
+
+    var children = document.querySelector('#children')
+    var childContainer = document.querySelector('.child-container')
+
+    children.addEventListener('change', () => {
+        if (children.value === "1") {
+            childContainer.classList.remove('d-none')
+        } else {
+            childContainer.classList.add('d-none')
+        }
+    })
+
+    var kontotyp = document.querySelector('#kontotyp')
+    var bank = document.querySelector('.bank')
+    var gelb = document.querySelector('.gelb')
+
+    kontotyp.addEventListener('change', () => {
+        if (kontotyp.value === "bank") {
+            bank.classList.remove('d-none')
+            document.querySelector('#bankkonto-inhaber').setAttribute('required', "true")
+            document.querySelector('#bank').setAttribute('required', "true")
+            document.querySelector('#number').setAttribute('required', "true")
+        } else {
+            bank.classList.add('d-none')
+            document.querySelector('#bankkonto-inhaber').removeAttribute('required')
+            document.querySelector('#bank').removeAttribute('required')
+            document.querySelector('#number').removeAttribute('required')
+        }
+        if (kontotyp.value === "gelb") {
+            gelb.classList.remove('d-none')
+            document.querySelector('#gelb-inhaber').setAttribute('required', "true")
+            document.querySelector('#gelb-pc-number').setAttribute('required', "true")
+        } else {
+            gelb.classList.add('d-none')
+            document.querySelector('#gelb-inhaber').removeAttribute('required')
+            document.querySelector('#gelb-pc-number').removeAttribute('required')
+        }
+    })
+
+    var taetigkeit = document.querySelector('#taetigkeit')
+
+    taetigkeit.addEventListener('change', () => {
+
+        if (taetigkeit.value === "an") {
+            document.querySelector('.an').classList.remove('d-none')
+        } else {
+            document.querySelector('.al').classList.add('d-none')
+            document.querySelector('#al-since').removeAttribute('required')
+        }
+        if (taetigkeit.value === "al") {
+            document.querySelector('.al').classList.remove('d-none')
+            document.querySelector('#al-since').setAttribute('required', "true")
+        } else {
+            document.querySelector('.al').classList.add('d-none')
+            document.querySelector('#al-since').removeAttribute('required')
+        }
+        if (taetigkeit.value === "uni") {
+            document.querySelector('.uni').classList.remove('d-none')
+            document.querySelector('#uni').setAttribute('required', "true")
+        } else {
+            document.querySelector('.uni').classList.add('d-none')
+            document.querySelector('#uni').removeAttribute('required')
+        }
+        if (taetigkeit.value === "lhr") {
+            document.querySelector('.fin').classList.remove('d-none')
+            document.querySelector('#fin').setAttribute('required', "true")
+        } else {
+            document.querySelector('.fin').classList.add('d-none')
+            document.querySelector('#fin').removeAttribute('required')
+        }
+        if (taetigkeit.value === "se") {
+            document.querySelector('.se').classList.remove('d-none')
+            document.querySelector('.se-nr').classList.remove('d-none')
+
+            document.querySelector('.se input').setAttribute('required', "true")
+            document.querySelector('.se-nr input').setAttribute('required', "true")
+        } else {
+            document.querySelector('.se').classList.add('d-none')
+            document.querySelector('.se-nr').classList.add('d-none')
+
+            document.querySelector('#se-name').removeAttribute('required')
+            document.querySelector('#se-anr').removeAttribute('required')
+        }
+    })
+</script>
+</html>
