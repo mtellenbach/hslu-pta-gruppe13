@@ -6,7 +6,7 @@
     <title>PTA Gruppe 13</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../libs/bootstrap-4.5.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../libs/bootstrap-4.5.3-dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
         .bd-placeholder-img {
@@ -25,7 +25,7 @@
         }
     </style>
     <!-- Custom styles for this template -->
-    <link href="../css/base.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
 </head>
 <body class="d-flex flex-column h-100">
 <header>
@@ -68,6 +68,7 @@
         <h1 class="mt-5">Willkommen bei der einfachen Erfassung von EO-Anmeldeformulare</h1>
         <p>Hier können Sie Ihre erfassten Daten überprüfen</p>
         <div class="card card-body">
+            <h3>Vom Rechnungsführer eingegebene Daten:</h3>
             <dl>
                 <dt>AHV</dt>
                 <dd>CH93 xxxx xxxx xxxx xx</dd>
@@ -88,9 +89,42 @@
                 <dt>Anzahl Diensttage</dt>
                 <dd>5</dd>
             </dl>
-            <a href="/correct.html" class="btn btn-primary mt-2">Daten korrigieren</a>
-            <a href="#" class="btn btn-danger mt-2">Dieser Eintrag löschen</a>
         </div>
+        <div class="card card-body">
+            <h3>Vom Dienstleistenden angegebene Daten:</h3>
+            <dl>
+                <dt>Zivilstand</dt>
+                <dd>ledig</dd>
+                <dt>Kinder</dt>
+                <dd>nein</dd>
+                <dt>Vordienstliche Tätigkeit</dt>
+                <dd>Arbeitnehmer/in</dd>
+                <dt>E-Mail des Arbeitgebers</dt>
+                <dd>chef@mastermind.com</dd>
+                <dt>Kontotyp</dt>
+                <dd>Gelbes Konto</dd>
+                <dt>Kontoinhaber</dt>
+                <dd>Melchior Mastermind</dd>
+                <dt>PC-Kto.</dt>
+                <dd>01-11111-11</dd>
+            </dl>
+            <a href="correct.html" class="btn btn-primary mt-2">Daten korrigieren</a>
+        </div>
+
+
+        <form class="mt-5" action="confirmation.html">
+            <div class="mb-3 input-group">
+                <div class="custom-file">
+                    <input type="file" accept=".pdf" class="custom-file-input" id="inputGroupFile01"
+                           aria-describedby="inputGroupFileAddon01">
+                    <label class="custom-file-label" for="inputGroupFile01">Geben Sie Ihre digitale Signatur an</label>
+                </div>
+            </div>
+            <div class="d-flex flex-row justify-content-between">
+                <button class="btn btn-primary" type="submit">Signieren und senden</button>
+                <a class="btn btn-outline-primary" href="../../docs/pdfA.png" target="_blank">PDF generieren</a>
+            </div>
+        </form>
     </div>
 </main>
 

@@ -170,6 +170,12 @@
                         <option value="gan">gleichzeitig Arbeitnehmer(in) und selbstständig erwerbend?</option>
                     </select>
                 </div>
+            </fieldset>
+            <fieldset class="row">
+                <div class="an d-none form-group col-sm-6">
+                    <label for="an-mail">E-Mail des Arbeitgebers (optional zur Weiterleitung des Formulars)</label>
+                    <input class="form-control" type="text" name="an-mail" id="an-mail">
+                </div>
                 <div class="al d-none form-group col-sm-6">
                     <label for="al-since">seit</label>
                     <input class="form-control" type="text" name="al-since" id="al-since">
@@ -257,8 +263,8 @@
     zs.addEventListener('change', () => {
         if (zs.value === "verheiratet") {
             partner.classList.remove('d-none')
-            document.querySelector('#partner').setAttribute('required', true)
-            document.querySelector('#partner-birth').setAttribute('required', true)
+            document.querySelector('#partner').setAttribute('required', "true")
+            document.querySelector('#partner-birth').setAttribute('required', "true")
         } else {
             partner.classList.add('d-none')
             document.querySelector('#partner').removeAttribute('required')
@@ -284,9 +290,9 @@
     kontotyp.addEventListener('change', () => {
         if (kontotyp.value === "bank") {
             bank.classList.remove('d-none')
-            document.querySelector('#bankkonto-inhaber').setAttribute('required', true)
-            document.querySelector('#bank').setAttribute('required', true)
-            document.querySelector('#number').setAttribute('required', true)
+            document.querySelector('#bankkonto-inhaber').setAttribute('required', "true")
+            document.querySelector('#bank').setAttribute('required', "true")
+            document.querySelector('#number').setAttribute('required', "true")
         } else {
             bank.classList.add('d-none')
             document.querySelector('#bankkonto-inhaber').removeAttribute('required')
@@ -295,8 +301,8 @@
         }
         if (kontotyp.value === "gelb") {
             gelb.classList.remove('d-none')
-            document.querySelector('#gelb-inhaber').setAttribute('required', true)
-            document.querySelector('#gelb-pc-number').setAttribute('required', true)
+            document.querySelector('#gelb-inhaber').setAttribute('required', "true")
+            document.querySelector('#gelb-pc-number').setAttribute('required', "true")
         } else {
             gelb.classList.add('d-none')
             document.querySelector('#gelb-inhaber').removeAttribute('required')
@@ -307,39 +313,46 @@
     var taetigkeit = document.querySelector('#taetigkeit')
 
     taetigkeit.addEventListener('change', () => {
-        if (taetigkeit.value === "al") {
-            document.querySelector('.al').classList.remove('d-none')
-            document.querySelector('.al input').setAttribute('required', true)
+
+        if (taetigkeit.value === "an") {
+            document.querySelector('.an').classList.remove('d-none')
         } else {
             document.querySelector('.al').classList.add('d-none')
-            document.querySelector('.al input').remove('required')
+            document.querySelector('#al-since').removeAttribute('required')
         }
-        if (taetigkeit.value === "uni"){
+        if (taetigkeit.value === "al") {
+            document.querySelector('.al').classList.remove('d-none')
+            document.querySelector('#al-since').setAttribute('required', "true")
+        } else {
+            document.querySelector('.al').classList.add('d-none')
+            document.querySelector('#al-since').removeAttribute('required')
+        }
+        if (taetigkeit.value === "uni") {
             document.querySelector('.uni').classList.remove('d-none')
-            document.querySelector('.uni input').setAttribute('required', true)
+            document.querySelector('#uni').setAttribute('required', "true")
         } else {
             document.querySelector('.uni').classList.add('d-none')
-            document.querySelector('.uni input').removeAttribute('required')
+            document.querySelector('#uni').removeAttribute('required')
         }
-        if (taetigkeit.value === "lhr"){
+        if (taetigkeit.value === "lhr") {
             document.querySelector('.fin').classList.remove('d-none')
-            document.querySelector('.fin input').setAttribute('required', true)
+            document.querySelector('#fin').setAttribute('required', "true")
         } else {
             document.querySelector('.fin').classList.add('d-none')
-            document.querySelector('.fin input').removeAttribute('required')
+            document.querySelector('#fin').removeAttribute('required')
         }
-        if (taetigkeit.value === "se"){
+        if (taetigkeit.value === "se") {
             document.querySelector('.se').classList.remove('d-none')
             document.querySelector('.se-nr').classList.remove('d-none')
 
-            document.querySelector('.se input').setAttribute('required', true)
-            document.querySelector('.se-nr input').setAttribute('required', true)
+            document.querySelector('.se input').setAttribute('required', "true")
+            document.querySelector('.se-nr input').setAttribute('required', "true")
         } else {
             document.querySelector('.se').classList.add('d-none')
             document.querySelector('.se-nr').classList.add('d-none')
 
-            document.querySelector('.se input').removeAttribute('required')
-            document.querySelector('.se-nr input').removeAttribute('required')
+            document.querySelector('#se-name').removeAttribute('required')
+            document.querySelector('#se-anr').removeAttribute('required')
         }
     })
 </script>
